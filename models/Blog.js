@@ -27,6 +27,8 @@ Blog.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'painting',
+        modelName: 'blog',
     }
 )
+
+module.exports = Blog;
