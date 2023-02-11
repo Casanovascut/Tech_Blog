@@ -1,3 +1,12 @@
+<h1>
+    <button type="button" class="btn btn-primary">login</button>
+    <button type="button" class="btn btn-primary">signup</button>
+</h1>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">WRITE YOUR POST</label>
+    <textarea class="form-control" id="blogContent" rows="3"></textarea>
+    <button type="button" class="btn btn-primary" id="new-blog">SUBMIT</button>
+</div>
 <div>
     {{#if blogs.length}}
     {{#each blogs as |blog|}}
@@ -6,9 +15,11 @@
         <div class="mb-3">
             <label class="form-label">{{blog.user_id}}</label>
             <textarea class="form-control" rows="3" disabled readonly>{{blog.content}}</textarea>
+            <button type="button" class="btn btn-primary">DELETE</button>
         </div>
         </p>
     </div>
     {{/each}}
     {{/if}}
 </div>
+<script src="/js/blog.js"></script>
